@@ -40,8 +40,8 @@ To demonstrate the operational value of this model, I translated the JMP Logisti
 Technical Notes:
 **1. Parameter Stability** The 'Unstable' markers in the parameter estimates are a result of Perfect Separation in the training data (i.e., all borrowers with 3+ Lates defaulted). While this can inflate standard errors, it confirms the high predictive power of these categorical variables in identifying absolute risk zones.
 **2. Factors Calculations**
-* **DTI Ratio (Debt-to-Income):** * *Formula:* `(Existing Monthly Debt Obligations / Average Monthly Gross Revenue)`
+* **DTI Ratio (Debt-to-Income):** *Formula:* = `(Existing Monthly Debt Obligations / Average Monthly Gross Revenue)`
   * *Logic:* I used a **Random Normal Distribution** centered at **0.25** for "Safe" sectors (Grains) and **0.40** for "Volatile" sectors (Fruit), showcasing the higher credit dependency in perishables.
-* **Transaction Consistency:** * Calculated as the **Coefficient of Variation (CV)** of the last 6 months of digital payments. 
+* **Transaction Consistency:** Calculated as the **Coefficient of Variation (CV)** of the last 6 months of digital payments. 
   * *Logic:* High CV (>0.15) signals seasonal instability, a primary driver in our Logistic model.
 * **Payment History:** * Assigned based on a weighted probability—SMEs with a **Credit Age > 5 years** were 70% less likely to have "3+ Lates" in the simulation.
