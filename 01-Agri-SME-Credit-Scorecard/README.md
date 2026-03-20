@@ -44,4 +44,4 @@ Technical Notes:
   * *Logic:* I used a **Random Normal Distribution** centered at **0.25** for "Safe" sectors (Grains) and **0.40** for "Volatile" sectors (Fruit), showcasing the higher credit dependency in perishables.
 * **Transaction Consistency:** Calculated as the **Coefficient of Variation (CV)** of the last 6 months of digital payments. 
   * *Logic:* High CV (>0.15) signals seasonal instability, a primary driver in our Logistic model.
-* **Payment History:** * Assigned based on a weighted probability—SMEs with a **Credit Age > 5 years** were 70% less likely to have "3+ Lates" in the simulation.
+* **Payment History:**  Assigned based on a weighted probability; SMEs with a **Credit Age > 5 years** were 70% less likely to have "3+ Lates" in the simulation.
