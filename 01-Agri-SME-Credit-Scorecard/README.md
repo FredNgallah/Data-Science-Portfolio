@@ -28,4 +28,13 @@ The following report shows the logistic regression fit, where we achieved an **R
 
 ![Full Model Results](./model_results_full.png)
 
+---
+## 🛠️ Live Deployment: Automated Underwriting Tool
+To demonstrate the operational value of this model, I translated the JMP Logistic Regression formula into a functional **Google Sheets Credit Scorecard**. 
+
+* **How it works:** When a new SME's data (DTI, Payment History, etc.) is entered, the sheet automatically calculates the probability of default using the model's coefficients.
+* **The Decision Engine:** The system applies the **10% Conservative Threshold** to instantly flag applicants as "APPROVE" or "REJECT."
+
+🔗 **[View the Live Credit Scorecard here](https://docs.google.com/spreadsheets/d/1I13uLEvRGlLYLWJVpH0Jy8CS_J3HZ0PZuJTS-6somhQ/edit?gid=1421198885#gid=1421198885&range=A1:L121)**
+
 Technical Note on Parameter Stability: The 'Unstable' markers in the parameter estimates are a result of Perfect Separation in the training data (i.e., all borrowers with 3+ Lates defaulted). While this can inflate standard errors, it confirms the high predictive power of these categorical variables in identifying absolute risk zones.
