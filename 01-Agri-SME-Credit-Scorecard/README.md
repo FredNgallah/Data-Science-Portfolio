@@ -22,3 +22,10 @@ By setting the **Desirability** for Default (1) to zero and Repayment (0) to one
 I exported the JMP prediction formula into an automated **Google Sheets Credit Engine**.
 * **Strict Threshold:** Loans are only approved if the predicted probability of default is **< 10%**.
 * **Result:** This stricter threshold successfully filters out the "False Negatives" identified during model training.
+---
+## 📊 Full Model Analysis (JMP 18)
+The following report shows the logistic regression fit, where we achieved an **RSquare(U) of 0.884** and identified the critical risk triggers for the portfolio.
+
+![Full Model Results](./model_results_full.png)
+
+Technical Note on Parameter Stability: > "The 'Unstable' markers in the parameter estimates are a result of Perfect Separation in the training data (e.g., all borrowers with 3+ Lates defaulted). While this can inflate standard errors, it confirms the high predictive power of these categorical variables in identifying absolute risk zones."
