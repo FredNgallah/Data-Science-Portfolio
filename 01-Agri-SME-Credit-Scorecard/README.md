@@ -28,4 +28,4 @@ The following report shows the logistic regression fit, where we achieved an **R
 
 ![Full Model Results](./model_results_full.png)
 
-Technical Note on Parameter Stability: > "The 'Unstable' markers in the parameter estimates are a result of Perfect Separation in the training data (e.g., all borrowers with 3+ Lates defaulted). While this can inflate standard errors, it confirms the high predictive power of these categorical variables in identifying absolute risk zones."
+Technical Note on Parameter Stability: The 'Unstable' markers in the parameter estimates are a result of Perfect Separation in the training data (i.e., all borrowers with 3+ Lates defaulted). While this can inflate standard errors, it confirms the high predictive power of these categorical variables in identifying absolute risk zones.
